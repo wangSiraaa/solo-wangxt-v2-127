@@ -1,0 +1,12 @@
+From: Alice <alice@example.com>
+To: Bob <bob@example.com>
+Subject: =?utf-8?b?5b6q546v5byV55So?=
+Date: Tue, 14 Nov 2023 10:00:00 +0000
+Message-ID: <cycle-a@example.com>
+References: <cycle-c@example.com> <cycle-b@example.com> <cycle-a@example.com>
+In-Reply-To: <cycle-c@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+这封邮件在 References 中引用了自己（A->C->B->A），构成循环引用。
+解析与会话重建都不能死循环，且必须把环标记出来而不是强行拆开。

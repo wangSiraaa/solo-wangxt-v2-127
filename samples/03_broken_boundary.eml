@@ -1,0 +1,21 @@
+From: System <noreply@example.com>
+To: archive@example.com
+Subject: =?utf-8?b?5o2f5Z2P55qE5YiG57G7IGJvdW5kYXJ5?=
+Date: Wed, 15 Nov 2023 09:00:00 +0000
+Message-ID: <broken-boundary-03@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="CORRECT-BOUNDARY"
+
+This is a preamble that multipart-aware readers should ignore.
+
+--WRONG-BOUNDARY
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+第一个部件使用了与信头声明不一致的边界，解析器必须登记
+StartBoundaryNotFoundDefect 之类的结构性缺陷，并且不能崩溃。
+
+--CORRECT-BOUNDARY
+Content-Type: text/plain; charset=utf-8
+
+第二个部件能对上正确边界，但文件在此截断：缺少结束边界

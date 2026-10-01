@@ -1,0 +1,11 @@
+From: Team <team@example.com>
+To: list@example.com
+Subject: =?utf-8?b?5omr5o+P55qE5paH5qGj?=
+Date: Sun, 19 Nov 2023 12:00:00 +0000
+Message-ID: <same-subject-other-thread@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+这封与样例 05 主题相同（剥掉 Re: 后弱键一致），但没有任何 References
+或 In-Reply-To 关联。系统只能把它列为 subject_candidates 弱候选，
+绝不能据此并入同一会话。

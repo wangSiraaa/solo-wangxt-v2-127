@@ -1,0 +1,11 @@
+From: Attacker <attacker@example.com>
+To: archive@example.com
+Subject: Re: =?utf-8?b?5a2j5bqm5oql5ZGK?=
+Date: Sat, 18 Nov 2023 06:00:00 +0000
+Message-ID: <quarterly-report-2023q3@example.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+这封邮件复用了另一份完全不同邮件的 Message-ID（内容冲突）。
+系统必须保留两条记录并在 conflicts 中标记 retained-conflict，
+不得用唯一约束拒绝、也不得强行合并为同一封。

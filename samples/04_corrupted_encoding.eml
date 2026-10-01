@@ -1,0 +1,22 @@
+From: Legacy App <legacy@example.com>
+To: archive@example.com
+Subject: corrupted encoding: bad base64 and unknown charset
+Date: Thu, 16 Nov 2023 08:30:00 +0000
+Message-ID: <corrupt-04@example.com>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="ENC-BOUND"
+
+--ENC-BOUND
+Content-Type: text/plain; charset="x-unknown-cs-1999"
+Content-Transfer-Encoding: 8bit
+
+声明了系统不存在的字符集 x-unknown-cs-1999，解析器必须回退解码
+并记录 CharsetFallback 缺陷，不能丢正文。
+
+--ENC-BOUND
+Content-Type: application/pdf; name="report.pdf"
+Content-Disposition: attachment; filename="report.pdf"
+Content-Transfer-Encoding: base64
+
+JVBERi0xLjQg@@@ not valid base64 !!! padding error ====
+--ENC-BOUND--

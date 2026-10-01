@@ -1,0 +1,9 @@
+From: Scanner Device <mfp@office.example>
+To: archive@example.com
+Subject: =?utf-8?b?5omr5o+P55qE5paH5qGj?=
+Date: Fri, 17 Nov 2023 07:00:00 +0000
+MIME-Version: 1.0
+Content-Type: text/plain; charset=utf-8
+
+这封邮件来自老式扫描设备，缺少 Message-ID 与 References。
+系统必须正常入库、列入 missing_message_ids，且不能伪造 ID 与同主题邮件合并。
